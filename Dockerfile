@@ -1,11 +1,11 @@
-FROM quay.io/argoproj/argocd:v2.12.0
+FROM quay.io/argoproj/argocd:v3.0.6
 
 USER root
 
 RUN apt-get update && \
     apt-get install -y \
-        curl \
-        gpg && \
+    curl \
+    gpg && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
